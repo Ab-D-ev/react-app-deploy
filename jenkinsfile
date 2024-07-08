@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh ''
-                sh 'scp -o StrictHostKeyChecking=no -i ${SSH_KEY_PATH} -r build Java2@20.235.243.236:/home/Java2/'
+                sh 'scp -o StrictHostKeyChecking=no -i ${SSH_KEY_PATH} -r dist Java2@20.235.243.236:/home/Java2/'
 
             }
         }
