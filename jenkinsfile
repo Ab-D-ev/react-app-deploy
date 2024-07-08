@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     parameters {
-        string(name: 'REPO_URL', defaultValue: 'https://github.com/Ab-D-ev/react-app-deploy.git', description: 'URL of the Git repository')
+        string(name: 'REPO_URL', defaultValue: 'https://github.com/AshishSingh-30/reacttest', description: 'URL of the Git repository')
         // string(name: 'SERVER_NAME', defaultValue: 'app2.actifyzone.com', description: 'Server name for NGINX')
         // string(name: 'NGINX_WEB_ROOT', defaultValue: '/home/Python4/jobportal', description: 'NGINX web root directory')
     }
@@ -23,15 +23,17 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'npm -v'
-                sh 'npm install'
+                sh 'pwd'
+                sh 'npm i'
                 sh 'npm run build'
             }
         }
         
         stage('Deploy') {
             steps {
-                sh 'scp -o StrictHostKeyChecking=no -i ${SSH_KEY_PATH} -r test Java2@20.235.243.236:/home/Java2/'
+                sh ''
+                sh 'scp -o StrictHostKeyChecking=no -i ${SSH_KEY_PATH} -r build Java2@20.235.243.236:/home/Java2/'
+
             }
         }
         
