@@ -17,7 +17,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: params.REPO_URL
+                // git branch: 'main', url: params.REPO_URL
+                sh 'git@github.com:AshishSingh-30/dextero-actify.git'
             }
         }
         
