@@ -1,11 +1,11 @@
 pipeline {
     agent any
     
-    parameters {
-        // string(name: 'REPO_URL', defaultValue: 'https://github.com/AshishSingh-30/dextero-actify.git', description: 'URL of the Git repository')
-        // string(name: 'SERVER_NAME', defaultValue: 'app2.actifyzone.com', description: 'Server name for NGINX')
-        // string(name: 'NGINX_WEB_ROOT', defaultValue: '/home/Python4/jobportal', description: 'NGINX web root directory')
-    }
+    // parameters {
+    //     // string(name: 'REPO_URL', defaultValue: 'https://github.com/AshishSingh-30/dextero-actify.git', description: 'URL of the Git repository')
+    //     // string(name: 'SERVER_NAME', defaultValue: 'app2.actifyzone.com', description: 'Server name for NGINX')
+    //     // string(name: 'NGINX_WEB_ROOT', defaultValue: '/home/Python4/jobportal', description: 'NGINX web root directory')
+    // }
      tools {
         nodejs 'NodeJS 22' // Ensure you have a NodeJS tool configured in Jenkins
     }
